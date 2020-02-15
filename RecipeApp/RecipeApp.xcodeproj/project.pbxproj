@@ -13,6 +13,7 @@
 		A3340B6823F86EE30019EB5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3340B6723F86EE30019EB5C /* Assets.xcassets */; };
 		A3340B6B23F86EE30019EB5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3340B6923F86EE30019EB5C /* LaunchScreen.storyboard */; };
 		A3340B7623F86EE30019EB5C /* RecipeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3340B7523F86EE30019EB5C /* RecipeAppTests.swift */; };
+		A3340B8223F86FF80019EB5C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3340B8123F86FF80019EB5C /* HomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		A3340B7123F86EE30019EB5C /* RecipeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3340B7523F86EE30019EB5C /* RecipeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAppTests.swift; sourceTree = "<group>"; };
 		A3340B7723F86EE30019EB5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3340B8123F86FF80019EB5C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		A3340B5A23F86EE00019EB5C /* RecipeApp */ = {
 			isa = PBXGroup;
 			children = (
+				A3340B8023F86FE70019EB5C /* ViewController */,
 				A3340B5B23F86EE00019EB5C /* AppDelegate.swift */,
 				A3340B5D23F86EE00019EB5C /* SceneDelegate.swift */,
 				A3340B6723F86EE30019EB5C /* Assets.xcassets */,
@@ -94,6 +97,14 @@
 				A3340B7723F86EE30019EB5C /* Info.plist */,
 			);
 			path = RecipeAppTests;
+			sourceTree = "<group>";
+		};
+		A3340B8023F86FE70019EB5C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A3340B8123F86FF80019EB5C /* HomeVC.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3340B5C23F86EE00019EB5C /* AppDelegate.swift in Sources */,
+				A3340B8223F86FF80019EB5C /* HomeVC.swift in Sources */,
 				A3340B5E23F86EE00019EB5C /* SceneDelegate.swift in Sources */,
 				A3340B6623F86EE00019EB5C /* RecipeApp.xcdatamodeld in Sources */,
 			);
