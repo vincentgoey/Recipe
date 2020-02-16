@@ -100,6 +100,7 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = RecipeDetailVC()
+        vc.recipeDetails = recipeList[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
