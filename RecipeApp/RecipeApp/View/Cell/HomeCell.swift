@@ -41,7 +41,6 @@ class HomeCell: UICollectionViewCell {
             } else {
                 recipeImageV.image = UIImage.init(named: recipe!.recipeImageName!)
             }
-//            self.recipeImageV.image = recipe!.recipeImagePathType == "BinaryData"? UIImage.init(data: recipe!.recipeImageData) : UIImage.init(named: recipe!.recipeImageName)
         }
     }
     
@@ -84,7 +83,7 @@ class HomeCell: UICollectionViewCell {
         nameLabel.translatesAutoresizingMaskIntoConstraints                                         = false
         nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8).isActive            = true
         nameLabel.topAnchor.constraint(equalTo: typeLabel.bottomAnchor, constant: 5).isActive       = true
-        nameLabel.widthAnchor.constraint(equalToConstant: 120).isActive                             = true
+        nameLabel.widthAnchor.constraint(equalToConstant: contentView.frame.width).isActive         = true
                 
     }
     

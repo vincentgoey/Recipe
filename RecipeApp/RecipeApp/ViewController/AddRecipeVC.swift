@@ -61,6 +61,8 @@ class AddRecipeVC: UIViewController {
         } catch {
             print("Error reading plist: \(error), format: \(propertyListFormat)")
         }
+        
+        typePicker.reloadAllComponents()
     }
     
     func configureTableView() {
@@ -262,10 +264,6 @@ extension AddRecipeVC: UIPickerViewDelegate, UIPickerViewDataSource{
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return self.recipeTypeArray.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.typeLAbel.text = self.recipeTypeArray[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

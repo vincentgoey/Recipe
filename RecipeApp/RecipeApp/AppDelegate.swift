@@ -15,7 +15,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        let firstLaunch = UserDefaults.standard.bool(forKey: "launch")
+
+        if !firstLaunch {
+            // first time launch, pre populate data
+            let dummyData = Recipe(context: PersistenceServce.context)
+            dummyData.createdDate = Date()
+            dummyData.recipeName = "Testing Receipe"
+            dummyData.recipeType = "Rice"
+            dummyData.recipeSteps = ["Cook Chicken", "Cook Rice", "Cook Together"]
+            dummyData.recipeIngredients = ["Chicken", "Rice", "Water"]
+            dummyData.recipeImageName = "chickenrice"
+            dummyData.recipeImagePathType = "ImageFile"
+            dummyData.recipeImageData = nil
+            
+            PersistenceServce.saveContext()
+            UserDefaults.standard.set(true, forKey: "launch")
+        }
         return true
     }
 
