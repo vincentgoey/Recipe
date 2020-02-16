@@ -9,11 +9,21 @@
 import UIKit
 
 class RecipeDetailVC: UIViewController {
-
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var IngredientLabel: UILabel!
+    @IBOutlet weak var stepsLabel: UILabel!
+    
+    @IBOutlet weak var ingredientLabelHeight: NSLayoutConstraint!
+    @IBOutlet weak var stepLabelHeight: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "Recipe Title"
     }
 
+    @IBAction func deleteRecipeButton(_ sender: Any) {
+    }
 }

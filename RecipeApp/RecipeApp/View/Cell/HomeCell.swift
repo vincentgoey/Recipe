@@ -32,21 +32,16 @@ class HomeCell: UICollectionViewCell {
             return lb
        }()
     
-    var testingColor: UIColor? {
+    var recipe: Recipe? {
         didSet{
-            self.recipeImageV.backgroundColor = testingColor
-        }
-    }
-    
-    var typeLabels: String? {
-        didSet{
-            self.typeLabel.text = typeLabels
-        }
-    }
-    
-    var nameLabels: String? {
-        didSet{
-            self.nameLabel.text = nameLabels
+            self.nameLabel.text = recipe?.recipeName
+            self.typeLabel.text = recipe?.recipeType
+            if recipe!.recipeImagePathType == "BinaryData" {
+                recipeImageV.image = UIImage.init(data: recipe!.recipeImageData!)
+            } else {
+                recipeImageV.image = UIImage.init(named: recipe!.recipeImageName!)
+            }
+//            self.recipeImageV.image = recipe!.recipeImagePathType == "BinaryData"? UIImage.init(data: recipe!.recipeImageData) : UIImage.init(named: recipe!.recipeImageName)
         }
     }
     
@@ -56,6 +51,15 @@ class HomeCell: UICollectionViewCell {
         contentView.addSubview(recipeImageV)
         contentView.addSubview(typeLabel)
         contentView.addSubview(nameLabel)
+        
+        contentView.backgroundColor = .white
+        contentView.layer.shadowColor = UIColor.black.cgColor
+        contentView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        contentView.layer.shadowRadius = 2
+        contentView.layer.shadowOpacity = 0.5
+        contentView.layer.masksToBounds = false
+        contentView.layer.shadowPath = UIBezierPath(roundedRect: contentView.bounds, cornerRadius: contentView.layer.cornerRadius).cgPath
+
 
         setConstaint()
     }

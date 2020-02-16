@@ -2,13 +2,15 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15400" systemVersion="19A583" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Recipe" representedClassName=".Recipe" syncable="YES" codeGenerationType="class">
         <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="recipeImageName" optional="YES" attributeType="Binary"/>
+        <attribute name="recipeImageData" optional="YES" attributeType="Binary"/>
+        <attribute name="recipeImageName" optional="YES" attributeType="String"/>
         <attribute name="recipeImagePathType" optional="YES" attributeType="String"/>
         <attribute name="recipeIngredients" optional="YES" attributeType="Transformable" customClassName="[String]"/>
         <attribute name="recipeName" optional="YES" attributeType="String"/>
         <attribute name="recipeSteps" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="recipeType" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Recipe" positionX="-45" positionY="0" width="128" height="133"/>
+        <element name="Recipe" positionX="-45" positionY="0" width="128" height="163"/>
     </elements>
 </model>
